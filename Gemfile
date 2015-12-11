@@ -7,6 +7,7 @@ gem 'figaro'
 gem 'certified'
 gem 'google_places'
 gem "twitter-bootstrap-rails"
+gem 'omniauth-oauth2', '~> 1.3.1'
 
 # gem "twitter-bootstrap-railties"
 

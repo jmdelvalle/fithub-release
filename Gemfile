@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
+
 gem 'rails_db'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'

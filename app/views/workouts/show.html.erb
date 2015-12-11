@@ -1,0 +1,92 @@
+<!-- <p id="notice"><%= notice %></p> -->
+
+
+    <div class="row">
+        <div class="col-md-3">
+          <center>
+            <h3>This is a Workout for </h3>
+          </center>
+            <% @workout.weekdays.each do |day| %>
+              <div class="well well-sm">
+                <center>
+                  <h2><%= day.name %>s</h2>
+                </center>
+              </div>
+
+            <% end %>
+        </div>
+
+
+        <div class="col-md-6">
+          <div class="row"><br><br><br>
+            <div class="well well-sm">
+              <h3>Created By: <%= @workout.creator %></h3>
+              <h3>Workout: <%= @workout.name %></h3>
+              <h3>Category: <%= @workout.category %></h3>
+              <h3>Description of Workout: <%= @workout.description %></h3>
+              <h3>Challenges: <%= @workout.challenges %></h3><br>
+
+
+
+
+          </div>
+          <% @workout.exercises.each do |e| %>
+
+
+              <div class="well well-sm">
+                <h3><%= e.name %><br></h3>
+                <h5>Category: <%= e.muscle_group %><br></h5>
+                <h5>Muscles Worked: <%= e.specific_muscles_worked %><br></h5>
+                <h5> <p>
+                  How-To: <%= e.guide %><br>
+                </p><br></h5>
+                <div align="center"><img src="<%=e.pic_left %>" style="max-width:47.5%;height:auto"> <img src="<%= e.pic_right.gsub("1.jpg", "2.jpg") %>" style="max-width:47.5%;height:auto;"></div><br><br>
+                  <h4>Sets For This Exercise: <%= SetsAndRep.where(:exercise_id => e.id, :workout_id => @workout.id)[0].sets %></h4>
+                  <h4>Reps For This Exercise: <%= SetsAndRep.where(:exercise_id => e.id, :workout_id => @workout.id)[0].reps %></h4>
+
+
+              </div>
+            <% end %>
+            <!-- If the first user for the workout is not the current user  -->
+            <!-- And if the users for the workout includes current user -->
+
+
+
+            <% if able_to_join(current_user, @workout) %>
+              <%= form_for @users_workout, method: :post do |f| %>
+              <%= f.hidden_field :workout_id, :value => @workout.id%>
+              <%= f.hidden_field :user_id, :value => current_user.id%>
+              <center>
+                <%= f.submit "Join This Workout!", :class => "btn btn-primary" %>
+              </center>
+              <% end %>
+            <% end %>
+            <% if able_to_like(current_user, @workout).empty? && @workout.user_id != current_user.id %>
+              <%= form_for @like, method: :post do |f| %>
+              <%= f.hidden_field :workout_id, :value => @workout.id%>
+              <%= f.hidden_field :user_id, :value => current_user.id%>
+              <center>
+                <br><%= f.submit "Like This Workout!", :class => "btn btn-primary" %>
+              </center>
+            <% end %>
+
+            <% end %>
+
+        </div>
+        <div class="col-md-3"></div>
+
+    </div>
+
+
+
+
+
+<% if @workout.user_id == current_user.id %>
+  <center>
+    <h3><%= link_to 'Edit', edit_workout_path(@workout), :class => "btn btn-primary" %> | <%= link_to 'Back', my_workouts_path,:class => "btn btn-primary" %></h3>
+  </center>
+<% else %>
+<center>
+  <h3><%= link_to 'Back', my_workouts_path %></h3>
+</center>
+<% end %>

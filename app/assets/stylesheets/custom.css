@@ -1,0 +1,114 @@
+#page-wrapper {
+  background-color: #f7f7f7 !important;
+}
+
+a {
+  color: #ffffff;
+}
+
+.sidebar ul li a:hover {
+    background-color: #3284c5;
+    color: #eee;
+}
+
+.sidebar ul li a:focus {
+  background-color: #3284c5;
+  color: #eee;
+}
+
+
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+  background-color: #3284c5;
+  color: #eee;
+}
+
+.navbar-top-links li a:hover, .navbar-top-links li a:focus {
+  background-color: #3284c5;
+  color: #eee;
+}
+
+.dropdown-menu .fa {
+  color: black;
+}
+
+.dropdown-menu a:hover .fa {
+  color: white;
+}
+
+.form-control {
+  width: 25%
+}
+
+
+#page-body {
+  padding-top: 20px;
+}
+
+.btn-outline:hover {
+  background-color: #3c9ce7;
+}
+
+li {
+  text-decoration: none;
+}
+
+#black-icon {
+  color: black;
+}
+
+.dropdown-menu {
+  margin: 0px 0px 0px;
+  border-radius: 0px;
+}
+
+#app-nav {
+  border-color: #368ccf;
+  background-color: rgba(60, 156, 231, 1);
+}
+
+#facebook-btn {
+  background-color: #3b5998;
+  padding: 10px 13px;
+  border-radius: 5px;
+}
+
+#facebook-btn:hover, #facebook-btn:focus {
+  color: white;
+  background-color: #2f4779;
+}
+.btn-social>:first-child {
+  border-right: 0px;
+}
+.fa-facebook {
+  margin-top: 4px;
+}
+
+.panel-heading {
+  background-color: #3c9ce7;
+}
+
+.btn-primary {
+  background-color: #3c9ce7;
+}
+
+#name-input .form-control {
+  width: 70% !important;
+}
+
+#workouts-input .form-control {
+  width: 30% !important;
+}
+
+footer {
+  margin-bottom: -50px;
+}
+
+.jumbotron {
+  overflow: hidden;
+  height: 250px;
+  background-color: #424242;
+}
+
+.footer {
+  margin-bottom: 0;
+}

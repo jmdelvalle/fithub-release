@@ -1,0 +1,45 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="container">
+  <div align="center">
+    <div class="well well-sm">
+      <%= f.label "Current Body Weight" %>
+      <%= f.text_field :c_bodyweight %><br>
+      <%= f.label "Target Body Weight" %>
+      <%= f.text_field :t_bodyweight %><br><br>
+
+      <%= f.label "Current Bench Weight" %>
+      <%= f.text_field :c_bench %><br>
+      <%= f.label "Target Bench Weight" %>
+      <%= f.text_field :t_bench %><br><br>
+
+      <%= f.label "Current Squat Weight" %>
+      <%= f.text_field :c_squat %><br>
+      <%= f.label "Target Squat Weight" %>
+      <%= f.text_field :t_squat %><br><br>
+
+      <%= f.label "Currrent Deadlift Weight" %>
+      <%= f.text_field :c_deadlift %><br>
+      <%= f.label "Target Deadlift Weight" %>
+      <%= f.text_field :t_deadlift %><br><br>
+    </div>
+
+
+
+    <div class="actions">
+      <%= f.submit "Update Profile", class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
+<% end %>

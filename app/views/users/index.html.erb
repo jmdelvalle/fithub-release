@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<center><h1>Everyone On FitHub</h1></center><br>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+        <div class="container-fluid" id="medium_size">
+          <div class="well well-sm">
+            <center>
+              <h4><%= user.name %></h4>
+                <% if current_user.is_friend?(user.id) %>
+                  <small>Added!</small>
+                <% else %>
+                  <small><%= link_to "Follow", friendships_path(:friend_id => user), class:"btn btn-primary ", :method => :post %></small>
+
+                <% end %>
+            </center>
+          </div>
+        </div>
+      <% end %>
+  </tbody>
+</table>
+
+<br>

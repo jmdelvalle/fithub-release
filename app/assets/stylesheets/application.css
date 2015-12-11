@@ -1,0 +1,57 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree .
+*/
+
+.footer {
+}
+.footer .row {
+  padding: 20px;
+  background-color: #3c9ce7;
+  color: #ffffff;
+  border-color: #368CD0;
+}
+.footer .in {
+	text-align: center;
+  min-height: 150px;
+  border: 0px solid;
+  box-sizing: border-box;
+  padding: 20px;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.fa {
+	color: #ffffff;
+}
+.panel-body #accordion-arms{    
+    height: 600px;
+    overflow-y: scroll;
+  }
+.panel-body #accordion-legs{    
+    height: 600px;
+    overflow-y: scroll;
+  }
+
+.panel-body #accordion-back{    
+    height: 600px;
+    overflow-y: scroll;
+  }
+
+.panel-body #accordion-chest{    
+    height: 600px;
+    overflow-y: scroll;
+  }
+
+.panel-body #accordion-shoulders{    
+    height: 600px;
+    overflow-y: scroll;
+  }
+
+.panel-body #accordion-abdominals{    
+    height: 600px;
+    overflow-y: scroll;
+  }

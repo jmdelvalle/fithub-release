@@ -3,7 +3,7 @@
 }
 
 a {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .sidebar ul li a:hover {

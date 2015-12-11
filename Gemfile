@@ -8,7 +8,7 @@ gem 'certified'
 gem 'google_places'
 
 
-gem "twitter-bootstrap-rails"
+# gem "twitter-bootstrap-railties"
 
 group :development do
   gem 'rails_db'

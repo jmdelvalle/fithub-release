@@ -7,32 +7,32 @@ a {
 }
 
 .sidebar ul li a:hover {
-    background-color: #3284c5;
-    color: #eee;
+    background-color: #3284c5 !important;
+    color: #eee !important;
 }
 
 .sidebar ul li a:focus {
-  background-color: #3284c5;
+  background-color: #3284c5 !important;
   color: #eee;
 }
 
 
 .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
-  background-color: #3284c5;
-  color: #eee;
+  background-color: #3284c5 !important;
+  color: #eee !important;
 }
 
 .navbar-top-links li a:hover, .navbar-top-links li a:focus {
-  background-color: #3284c5;
-  color: #eee;
+  background-color: #3284c5 !important;
+  color: #eee !important;
 }
 
 .dropdown-menu .fa {
-  color: black;
+  color: black !important;
 }
 
 .dropdown-menu a:hover .fa {
-  color: white;
+  color: white !important;
 }
 
 .form-control {
@@ -45,7 +45,7 @@ a {
 }
 
 .btn-outline:hover {
-  background-color: #3c9ce7;
+  background-color: #3c9ce7 !important;
 }
 
 li {
@@ -74,7 +74,7 @@ li {
 
 #facebook-btn:hover, #facebook-btn:focus {
   color: white;
-  background-color: #2f4779;
+  background-color: #2f4779 !important;
 }
 .btn-social>:first-child {
   border-right: 0px;
